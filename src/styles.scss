@@ -1,1 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+	margin: 0 auto;
+	padding: 0 auto;
+  font-size: 1rem;
+  font-family: 'adriane', Georgia, serif;
+  color: #494c4e;
+  -webkit-font-smoothing: antialiased;
+	overflow-x: hidden;
+}
+
+.navbar .nav-link .nav-item a{
+	color: crimson;
+	border-bottom: 3px solid red;
+}
