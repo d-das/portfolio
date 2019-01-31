@@ -1,0 +1,31 @@
+.centered {
+  position: absolute;
+	width: 80%;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.profile {
+	max-height:50%;
+	width:100%;
+	position: relative;
+}
+
+.overlay {
+		color: crimson;
+	  background:rgba(0,0,0,0.5);
+}
+
+.box{
+  position:relative;
+}
+
+.img-title{
+  position: absolute;
+  color: #fff;
+  text-align: center;
+  left: 10%;
+  right: 10%;
+  top: 50%;
+}
