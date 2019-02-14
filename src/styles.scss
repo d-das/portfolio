@@ -6,10 +6,21 @@ body {
   font-family: 'adriane', Georgia, serif;
   color: #494c4e;
   -webkit-font-smoothing: antialiased;
-	overflow-x: hidden;
+
 }
 
-.navbar .nav-link .nav-item a{
+a {
 	color: crimson;
-	border-bottom: 3px solid red;
+}
+a:hover{
+	color: black;
+	text-decoration: line-through;
+	text-decoration-color: crimson;
+}
+
+.navbar-light
+.navbar-nav .nav-link:hover{
+	color: black;
+	text-decoration: line-through;
+	text-decoration-color: crimson;
 }
