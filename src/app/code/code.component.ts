@@ -7,9 +7,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CodeComponent implements OnInit {
 
-  constructor() { }
+  public ePlastick:boolean = false;
+  public eGo:boolean = false;
+  public eRofi:boolean = false;
+  public eWeb:boolean = false;
+  public eGender:boolean = false;
+
+  constructor() {
+    console.log("code constructor, eGo is:", this.eGo);
+  }
 
   ngOnInit() {
   }
+
+  sPlastick(){ this.ePlastick = !this.ePlastick }
+  sGo(){ this.eGo = !this.eGo }
+  sRofi(){ this.eRofi = !this.eRofi }
+  sWeb(){ this.eWeb = !this.eWeb }
+  sGender(){ this.eGender = !this.eGender }
+
 
 }

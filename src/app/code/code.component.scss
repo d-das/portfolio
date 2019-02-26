@@ -1,0 +1,20 @@
+.h5{
+	text-decoration: underline;
+	text-decoration-color: crimson;
+}
+
+a svg:hover #plus {
+  fill: #DC143C;
+}
+
+a svg:hover #minus {
+	stroke: #DC143C;
+}
+
+a svg #plus,
+a svg #minus {
+  transition: 50ms;
+  transition-timing-function: ease-in-out;
+  -webkit-transition: 50ms;
+  -webkit-transition-timing-function: ease-in-out;
+}
