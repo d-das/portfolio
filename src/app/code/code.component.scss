@@ -18,3 +18,23 @@ a svg #minus {
   -webkit-transition: 50ms;
   -webkit-transition-timing-function: ease-in-out;
 }
+
+a{
+}
+
+a:hover{
+	color: black;
+	text-decoration: line-through;
+	text-decoration-color: crimson;
+}
+
+.ptitle:hover{
+		color: black;
+		text-decoration: line-through;
+		text-decoration-color: crimson;
+}
+
+video {
+  width: 80%    !important;
+  height: auto   !important;
+}

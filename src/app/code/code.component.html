@@ -18,13 +18,76 @@
     <div class="col-md"></div>
     <div class="col-md-10 col-12 border rounded">
       <br>
-      <h5>"PlasTick" Gym App</h5><br>
+      <h4 class="ptitle">
+        <a (click)="sPlastick()"> "PlasTick" Gym App </a>
+      </h4>
+      <br>
       <p>
         Perhaps more of an obsession than a personal project, I have collaborated in building this app for the past year.<br>
       </p>
 
       <div *ngIf="ePlastick">
-        Lorem ipsum dolor text....
+        The project is an angular mobile app built within the ionic4 framework, with a simple backend based on firestore.<br>
+        The goal of the project is to create a digital interface for bouldering gyms, where users can locate, discover, create, and comunicate about climbing routes.<br><br>
+        The app can be broken down into several sections.<br><br><br>
+
+        <h5><i>The Route Feed:</i></h5>
+        <div class="row mx-1">
+          <div class="col-md">
+            The feed can be viewed as a list, or as a map of the gym floor, both of which are populated by routes which can then be filtered.
+            <br><br>
+          </div>
+          <div class="col-md" >
+            <video class="video-fluid z-depth-1" controls muted>
+              <source src="/assets/videos/route_feed.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </div>
+
+        <br><br>
+
+        <h5><i>The Route Details Page:</i></h5>
+        <div class="row mx-1">
+          <div class="col-md">
+            Detailed view of the route, with information about what kind of route it is, as well as send feedback and comment with other users about the route.
+            <br>
+          </div>
+          <div class="col-md">
+            <video class="video-fluid z-depth-1" controls muted>
+              <source src="/assets/videos/route_details.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </div>
+
+        <br><br>
+
+        <h5><i>The Route Creator:</i></h5>
+        <div class="row mx-1">
+          <div class="col-md">
+            Here users create routes by taking a picture, drawing holds on the picture, locating the route on a map, and describing the routes features.
+            <br>
+          </div>
+          <div class="col-md">
+            <video class="video-fluid z-depth-1" controls muted>
+              <source src="/assets/videos/route_creator.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </div>
+
+        <br><br>
+
+        <h5><i>Analytics & Collections:</i></h5>
+        <div class="row mx-1">
+          <div class="col-md">
+            Users are then able to create custom lists or sets, as well as keep track of what routes they have climbed. In the future detailed analytics will be provided, so that users can understand their climbing and training from a deeper level.
+            <br>
+          </div>
+          <div class="col-md">
+            <video class="video-fluid z-depth-1" controls muted>
+              <source src="/assets/videos/lists.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </div>
       </div>
 
       <div style="text-align:right;">

@@ -1,0 +1,10 @@
+a svg:hover #rose {
+  fill: #DC143C;
+}
+
+a svg #rose {
+  transition: 50ms;
+  transition-timing-function: ease-in-out;
+  -webkit-transition: 50ms;
+  -webkit-transition-timing-function: ease-in-out;
+}
