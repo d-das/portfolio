@@ -24,3 +24,56 @@ a:hover{
 	text-decoration: line-through;
 	text-decoration-color: crimson;
 }
+
+.centered {
+  position: absolute;
+	width: 80%;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.profile {
+	max-height:50%;
+	width:100%;
+	position: relative;
+}
+
+.overlay {
+	  background:rgba(0,0,0,0.5);
+    font-size: 30px;
+}
+
+.box{
+  position:relative;
+  min-height: 200px;
+}
+
+.img-title{
+  position: absolute;
+  color: #fff;
+  text-align: center;
+  left: 10%;
+  right: 10%;
+  top: 50%;
+}
+
+@media (max-width: 767px) {
+    .overlay{
+      font-size: 18px;
+    }
+    .img-title{
+      top: 40%;
+      left: 2%;
+      right: 2%;
+    }
+    .profile{
+      min-height: 25%;
+    }
+}
+
+@media (max-width: 350px) {
+  .img-title{
+    top: 20%;
+  }
+}

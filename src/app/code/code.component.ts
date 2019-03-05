@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CodeComponent implements OnInit {
 
-  public ePlastick:boolean = true;
+  public ePlastick:boolean = false;
   public eGo:boolean = false;
   public eRofi:boolean = false;
   public eWeb:boolean = false;

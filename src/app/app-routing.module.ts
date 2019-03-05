@@ -6,6 +6,7 @@ import { WritingComponent } from './writing/writing.component';
 import { PhotoComponent } from './photo/photo.component';
 import { ContactComponent } from './contact/contact.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component'
+import { CivilizationComponent } from './civilization/civilization.component'
 
 const routes: Routes = [
   { path: "", component: HomeComponent },
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: "writing", component: WritingComponent },
   { path: "photo", component: PhotoComponent },
   { path: "contact", component: ContactComponent },
+  { path: "writing/civilization", component: CivilizationComponent},
   { path: "**", component: PageNotFoundComponent }
 ];
 
