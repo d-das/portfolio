@@ -64,3 +64,28 @@ video {
 		margin-right: 15%;
 		padding: 2%;
 }
+
+.thumbnail {
+	position: relative;
+  -ms-zoom: 0.5;
+  -moz-transform: scale(0.5);
+  -moz-transform-origin: 0 0;
+  -o-transform: scale(0.5);
+  -o-transform-origin: 0 0;
+  -webkit-transform: scale(0.5);
+  -webkit-transform-origin: 0 0;
+
+}
+
+.thumbnail iframe {
+  width: 1440px;
+  height: 900px;
+}
+
+.thumbnail-container {
+  width: calc(1440px * 0.6);
+  height: calc(900px * 0.6);
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+}

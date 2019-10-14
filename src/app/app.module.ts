@@ -10,6 +10,7 @@ import { ContactComponent } from './contact/contact.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { HomeComponent } from './home/home.component';
 import { CivilizationComponent } from './civilization/civilization.component';
+import { PoemWallComponent } from './poem-wall/poem-wall.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { CivilizationComponent } from './civilization/civilization.component';
     ContactComponent,
     PageNotFoundComponent,
     HomeComponent,
-    CivilizationComponent
+    CivilizationComponent,
+    PoemWallComponent
   ],
   imports: [
     BrowserModule,

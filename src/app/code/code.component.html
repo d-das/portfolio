@@ -229,11 +229,22 @@
         <a [routerLink]="" (click)="sWeb()">Simple Angular Web Apps</a>
       </h4>
       <p>
-        From perosnal sites to product presentation to digital-format zines and letters, I enjoy exploring the process of constructing digital communication.<br>
+        From personal sites to product presentation to digital-format zines and letters, I enjoy exploring the process of constructing digital communication. Below are some examples.<br>
       </p>
 
       <div *ngIf="eWeb">
-        Lorem ipsum dolor text....
+        <h5><i>Product Presentation:</i></h5><br>
+        <div class="thumbnail-container">
+          <div class="thumbnail mx-5">
+           <iframe src="/assets/sites/PlasTick/index.html" frameborder="0"></iframe>
+          </div>
+        </div>
+        <h5><i>Personal Site:</i></h5><br>
+        <div class="thumbnail-container">
+          <div class="thumbnail mx-5">
+           <iframe src="/assets/sites/alguna_artista/index.html" frameborder="0"></iframe>
+          </div>
+        </div>
       </div>
 
       <div style="text-align:right;">
@@ -265,7 +276,75 @@
       </p>
 
       <div *ngIf="eGender">
-        Lorem ipsum dolor text....
+        <p>
+          According to <a href="https://www.spanishdict.com/guide/masculine-and-feminine-nouns">Spanish Dict</a>, here are the loose rules for determining gender in spanish:<br><br>
+          &nbsp;<i>A word is masculine if it ends with:</i>
+        </p>
+          <blockquote>
+            -'o'<br>
+            -an accented vowel (á, é, í, ó, ú)<br>
+            -'ma'<br>
+            -a consonant other than d, z<br>
+            -'e'
+          </blockquote>
+        <p>
+          &nbsp;<i>And is feminine if it ends with:</i>
+        </p>
+          <blockquote>
+            -'a'<br>
+            -'d'<br>
+            -'z'<br>
+            -'ión'
+          </blockquote>
+        <p>
+          The problem, is that there are <i>a lot</i> of exceptions. So many that I begin to wonder if it could even be considered a rule. But how could one ever come up with a statistic of gender bending words?<br>
+          Well, unusually, <a href="https://spanish.stackexchange.com/questions/17397/what-percentage-of-nouns-ending-in-a-are-masculine-and-what-percentage-of-nouns">stack exchange</a> didn't provide any conclusive results. So I started thinking about language processing.
+          The first place my mind went to of course was Regular Expressions. The first step to any sort of sorting would be to separate the rule-followers from the gender benders. This is what I came up with:<br>
+        </p>
+        <code style="background-color: gainsboro; padding: 1%">
+          ((e|E)l ((\pL)(?!ión$))*([oeáéíóúbfghlmnpqrstvwx])$)|(l|L)a (\pL)*(([adz])|(ión))$
+        </code>
+        <br><br>
+        <p>
+          And here is the test run at <a href="www.regex101.com">RegEx101</a>:
+        </p>
+        <img class="img-responsive"src="../assets/imgs/regex_g.png" alt="RegEx Gender" /> <br>
+        <p>
+          I then ran this through the <a href="https://www.sketchengine.eu/estenten-spanish-corpus/">spanish esTenTen web corpus</a>, containing over 17.5 billion words.<br>
+          Here's what happened:
+        </p>
+        <img class="img-responsive"src="../assets/imgs/concordance.png" alt="Concordance Results" /> <br>
+        <p>
+          A <i>lot</i> of results. However, as you can see, a <i>lot</i> of duplicates.<br>
+          Theoretically, I could download the entire concordance results as a spreadsheet, and then filter out the duplicates on Google Sheets using this short script:
+        </p>
+        <div class="bash">
+          <code>
+            function removeDuplicates() &#123;<br>
+              &nbsp;var sheet = SpreadsheetApp.getActiveSheet();<br>
+              &nbsp;var data = sheet.getDataRange().getValues();<br>
+              &nbsp;var newData = new Array();<br>
+              &nbsp;for(i in data)&#123;<br>
+                &nbsp;&nbsp;var row = data[i];<br>
+                &nbsp;&nbsp;var duplicate = false;<br>
+                &nbsp;&nbsp;for(j in newData)&#123;<br>
+                  &nbsp;&nbsp;&nbsp;if(row.join() == newData[j].join())&#123;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;duplicate = true;<br>
+                  &nbsp;&nbsp;&nbsp;&#125;<br>
+                &nbsp;&nbsp;&#125;<br>
+                &nbsp;&nbsp;if(!duplicate)&#123;<br>
+                  &nbsp;&nbsp;&nbsp;newData.push(row);<br>
+                &nbsp;&nbsp;&#125;<br>
+              &nbsp;&#125;<br>
+              &nbsp;sheet.clearContents();<br>
+              &nbsp;sheet.getRange(1, 1, newData.length, newData[0].length)<br>
+                  &nbsp;&nbsp;.setValues(newData);<br>
+            &#125;<br>
+          </code>
+        </div>
+        <p>
+          However, I have had trouble downloading all the concordance results without paying. To be continued soon!
+        </p>
       </div>
 
       <div style="text-align:right;">
@@ -286,7 +365,7 @@
 
   <br><br>
 
-
+<!--
   <div class="row mx-1">
     <div class="col-md"></div>
 
@@ -318,7 +397,7 @@
 
     <div class="col-md"></div>
   </div>
-
+-->
 
 
   <br><br><br>
