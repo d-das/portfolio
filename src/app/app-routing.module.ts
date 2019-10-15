@@ -7,7 +7,6 @@ import { PhotoComponent } from './photo/photo.component';
 import { ContactComponent } from './contact/contact.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component'
 import { CivilizationComponent } from './civilization/civilization.component'
-import { PoemWallComponent } from './poem-wall/poem-wall.component'
 
 const routes: Routes = [
   { path: "", component: HomeComponent },
@@ -16,7 +15,6 @@ const routes: Routes = [
   { path: "photo", component: PhotoComponent },
   { path: "contact", component: ContactComponent },
   { path: "writing/civilization", component: CivilizationComponent},
-  { path: "writing/poem-wall", component: PoemWallComponent},
   { path: "**", component: PageNotFoundComponent }
 ];
 
@@ -25,21 +23,3 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-
-/*
-import { NgModule } from "@angular/core";
-import { RouterModule, Routes } from "@angular/router";
-import { PokemonListComponent } from "../pokemon-list/pokemon-list.component";
-
-const appRoutes: Routes = [
-  {
-    path: "pokemons",
-    component: PokemonListComponent
-  }
-];
-@NgModule({
-  imports: [RouterModule.forRoot(appRoutes)],
-  exports: [RouterModule]
-})
-export class AppRoutingModule {}
-*/

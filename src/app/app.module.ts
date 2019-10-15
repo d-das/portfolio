@@ -10,7 +10,7 @@ import { ContactComponent } from './contact/contact.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { HomeComponent } from './home/home.component';
 import { CivilizationComponent } from './civilization/civilization.component';
-import { PoemWallComponent } from './poem-wall/poem-wall.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -22,11 +22,11 @@ import { PoemWallComponent } from './poem-wall/poem-wall.component';
     PageNotFoundComponent,
     HomeComponent,
     CivilizationComponent,
-    PoemWallComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

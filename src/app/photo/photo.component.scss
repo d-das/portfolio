@@ -1,3 +1,10 @@
+@import "~@material/image-list/mdc-image-list";
+
+.my-masonry-image-list {
+  @include mdc-image-list-masonry-columns(3);
+}
+
+
 .album{
 	background-color: white;
 
